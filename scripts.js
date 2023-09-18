@@ -11,7 +11,7 @@ console.log(salarySum);
 // Second task:
 // Write the isObject() function. Use typeof operator.
 function isObject(valueToCheck) {
-    return typeof valueToCheck === "object" && valueToCheck !== null;
+    return typeof valueToCheck === "object";
 }
 
 // Third task:
@@ -22,10 +22,11 @@ const user = {
     name: 'John',
 }
 function removeProperty(object, key) {
-    if(key in object) {
-        delete object[key]
+    if (key in object) {
+        delete object[key];
         return true;
-    } else return false;
+    }
+    return false;
 }
 
 // Fourth task
@@ -46,8 +47,8 @@ const adam = {
     lastName: 'Johnson'
 }
 
-function checkIfUsersHaveTheSameName(objectOneName, objectTwoName) {
-    return objectOneName.firstName === objectTwoName.firstName;
+function checkIfUsersHaveTheSameName(userOneName, userTwoName) {
+    return userOneName.firstName === userTwoName.firstName;
 }
 
 checkIfUsersHaveTheSameName(firstJohn, secondJohn); // true
